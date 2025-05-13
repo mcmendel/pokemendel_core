@@ -36,3 +36,4 @@ ENV/
 .env
 .coverage
 htmlcov/ 
+resources/

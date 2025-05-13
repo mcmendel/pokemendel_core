@@ -1,3 +1,9 @@
+# Test dependencies
 pytest>=7.4.0
 pytest-cov>=4.1.0  # For coverage reporting
-pytest-xdist>=3.3.1  # For parallel test execution 
+pytest-xdist>=3.3.1  # For parallel test execution
+
+# Image downloader dependencies
+requests>=2.31.0  # For HTTP requests
+beautifulsoup4>=4.12.0  # For HTML parsing
+Pillow>=10.0.0  # For image handling 

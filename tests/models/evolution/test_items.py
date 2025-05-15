@@ -64,13 +64,21 @@ def test_item_from_str_invalid_input_type():
 
 def test_item_enum_membership():
     """Test that we can check if a value is a valid item."""
+    # Test valid enum members
     assert Item.WATER_STONE in Item
     assert Item.DRAGON_SCALE in Item
     
-    # Create a similar-looking but invalid enum value
+    # Test that non-members are handled appropriately
     class FakeItem:
         def __init__(self, value):
             self.value = value
     
     fake_item = FakeItem("Water Stone")
-    assert fake_item not in Item 
+    
+    # In Python 3.11, this raises TypeError
+    # In Python 3.12+, this returns False
+    try:
+        result = fake_item in Item
+        assert not result  # Python 3.12+
+    except TypeError:  # Python 3.11
+        pass  # This is also acceptable 

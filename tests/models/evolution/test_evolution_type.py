@@ -59,13 +59,21 @@ def test_from_str_invalid_input_type():
 
 def test_enum_membership():
     """Test that we can check if a value is a valid evolution type."""
+    # Test valid enum members
     assert EvolutionType.STONE in EvolutionType
     assert EvolutionType.TIME in EvolutionType
     
-    # Create a similar-looking but invalid enum value
+    # Test that non-members are handled appropriately
     class FakeEnum:
         def __init__(self, value):
             self.value = value
     
     fake_evolution = FakeEnum("stone")
-    assert fake_evolution not in EvolutionType 
+    
+    # In Python 3.11, this raises TypeError
+    # In Python 3.12+, this returns False
+    try:
+        result = fake_evolution in EvolutionType
+        assert not result  # Python 3.12+
+    except TypeError:  # Python 3.11
+        pass  # This is also acceptable 

@@ -12,6 +12,20 @@ from .evolution.evolution import Evolution
 
 @dataclass
 class Pokemon:
+    """Class representing a Pokémon.
+    
+    Attributes:
+        name (str): The Pokémon's name
+        gen (int): The generation this Pokémon was introduced in
+        types (List[Types]): The Pokémon's type(s)
+        stats (Optional[Stats]): The Pokémon's base stats
+        evolves_to (List[Evolution]): List of possible evolutions
+        colors (List[Colors]): The Pokémon's colors
+        supported_genders (List[Genders]): The Pokémon's possible genders
+        categories (List[Categories]): The Pokémon's categories
+        num_legs (int): Number of legs the Pokémon has
+    """
+    
     name: str
     gen: int
     types: List[Types]

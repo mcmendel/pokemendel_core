@@ -5,15 +5,16 @@ build-backend = "hatchling.build"
 [project]
 name = "pokemendel_core"
 version = "0.1.0"
-description = "A Python package for Pokémon-related functionality"
+description = "A Python package providing comprehensive data structures and utilities for working with Pokémon from Generations 1 and 2"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"},
+    {name = "Nir Mendel"},
 ]
+keywords = ["pokemon", "game", "data"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
@@ -21,9 +22,12 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Topic :: Games/Entertainment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-    # Add your dependencies here
+    "dataclasses>=0.6; python_version < '3.7'",
+    "typing-extensions>=4.0.0; python_version < '3.8'",
 ]
 
 [project.optional-dependencies]
@@ -35,6 +39,10 @@ dev = [
     "mypy>=1.0",
     "ruff>=0.0.290",
 ]
+
+[project.urls]
+Documentation = "https://github.com/yourusername/pokemendel_core#readme"
+Source = "https://github.com/yourusername/pokemendel_core"
 
 [tool.black]
 line-length = 88

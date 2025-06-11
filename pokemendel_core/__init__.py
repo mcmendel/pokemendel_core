@@ -13,7 +13,7 @@ Example:
     ['ROCK', 'DARK']
 """
 
-__version__ = "0.1.0"
+__version__ = "0.3.0"
 
 from pokemendel_core.data.gen1 import PokemonGen1
 from pokemendel_core.data.gen2 import PokemonGen2, NAME_TO_POKEMON

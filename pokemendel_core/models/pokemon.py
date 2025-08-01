@@ -8,6 +8,7 @@ from pokemendel_core.utils.definitions.genders import Genders
 from pokemendel_core.utils.definitions.categories import Categories
 from pokemendel_core.utils.definitions.stats import Stats
 from pokemendel_core.utils.definitions.natures import Natures
+from pokemendel_core.utils.definitions.abilities import Abilities
 from .evolution.evolution import Evolution
 
 
@@ -37,6 +38,7 @@ class Pokemon:
     categories: List[Categories] = field(default_factory=list)
     num_legs: int = -1
     nature: Optional[Natures] = None
+    supported_abilities: List[Abilities] = field(default=list)
 
     def evolve_pokemon(self, evolution_pokemon: 'Pokemon') -> None:
         """Evolve this Pokemon into another Pokemon."""
@@ -49,3 +51,4 @@ class Pokemon:
         self.supported_genders = evolution_pokemon.supported_genders
         self.num_legs = evolution_pokemon.num_legs
         self.nature = evolution_pokemon.nature
+        self.supported_abilities = evolution_pokemon.supported_abilities

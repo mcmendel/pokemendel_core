@@ -4287,6 +4287,7 @@ NAME_TO_POKEMON = {
         gen=2,
         types=[Types.WATER, Types.POISON],
         supported_genders=[Genders.MALE, Genders.FEMALE],
+        colors=[Colors.BLUE, Colors.YELLOW],
         stats=Stats(
             attack=95,
             defence=85,

@@ -57,6 +57,8 @@ To set up the development environment:
    - Windows: `venv\Scripts\activate`
    - Unix/MacOS: `source venv/bin/activate`
 4. Install development dependencies: `pip install -e ".[dev]"`
+5. Install package: `python -m build`
+6. From other project: `pip install -e /Users/nirmendel/work/pokemendel_core` or `cp dist/pokemendel_core-0.*-py3-none-any.whl /Users/nirmendel/work/local_pypi/`
 
 ### Running Tests
 

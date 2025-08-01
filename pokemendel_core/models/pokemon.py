@@ -38,7 +38,7 @@ class Pokemon:
     categories: List[Categories] = field(default_factory=list)
     num_legs: int = -1
     nature: Optional[Natures] = None
-    supported_abilities: List[Abilities] = field(default=list)
+    supported_abilities: List[Abilities] = field(default_factory=list)
 
     def evolve_pokemon(self, evolution_pokemon: 'Pokemon') -> None:
         """Evolve this Pokemon into another Pokemon."""

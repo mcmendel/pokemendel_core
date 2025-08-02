@@ -21,5 +21,5 @@ def list_gen_pokemons(gen: int) -> list[Pokemon]:
     elif gen == 2:
         return GEN2_NAME_TO_POKEMON.values()
     elif gen == 3:
-        return GEN3_NAME_TO_POKEMON.value()
+        return GEN3_NAME_TO_POKEMON.values()
     raise ValueError(f"No data for generation {gen}")

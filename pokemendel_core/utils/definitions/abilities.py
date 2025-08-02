@@ -13,6 +13,7 @@ class Abilities(EnumList):
     
     # Generation 1 Abilities (introduced in Gen 3)
     STENCH = "Stench"
+    NEUTRALIZING_GAS = "Neutralizing Gas"
     DRIZZLE = "Drizzle"
     SPEED_BOOST = "Speed Boost"
     BATTLE_ARMOR = "Battle Armor"
@@ -26,6 +27,7 @@ class Abilities(EnumList):
     OBLIVIOUS = "Oblivious"
     CLOUD_NINE = "Cloud Nine"
     COMPOUND_EYES = "Compound Eyes"
+    COMPETITIVE = "Competitive"
     INSOMNIA = "Insomnia"
     COLOR_CHANGE = "Color Change"
     IMMUNITY = "Immunity"
@@ -221,6 +223,7 @@ def get_ability_description(ability: str) -> str:
     descriptions = {
         # Generation 1 abilities
         Abilities.STENCH: "May cause the target to flinch when hit by a move.",
+        Abilities.NEUTRALIZING_GAS: "Neutralizes abilities of all Pokémon in battle.",
         Abilities.DRIZZLE: "Summons rain when the Pokémon enters battle.",
         Abilities.SPEED_BOOST: "Speed increases by one stage each turn.",
         Abilities.BATTLE_ARMOR: "Prevents critical hits.",
@@ -234,6 +237,7 @@ def get_ability_description(ability: str) -> str:
         Abilities.OBLIVIOUS: "Cannot be infatuated or taunted.",
         Abilities.CLOUD_NINE: "Negates weather effects.",
         Abilities.COMPOUND_EYES: "Increases accuracy of moves.",
+        Abilities.COMPETITIVE: "aises the ability-bearer's Special Attack by two stages when hit by a stat-lowering move.",
         Abilities.INSOMNIA: "Cannot fall asleep.",
         Abilities.COLOR_CHANGE: "Changes type to match the last move used against it.",
         Abilities.IMMUNITY: "Cannot be poisoned.",
@@ -403,10 +407,10 @@ def get_abilities_by_generation(gen: int) -> List[str]:
         List of abilities introduced in that generation
     """
     gen_1_abilities = [
-        Abilities.STENCH, Abilities.DRIZZLE, Abilities.SPEED_BOOST, Abilities.BATTLE_ARMOR,
+        Abilities.STENCH, Abilities.NEUTRALIZING_GAS, Abilities.DRIZZLE, Abilities.SPEED_BOOST, Abilities.BATTLE_ARMOR,
         Abilities.STURDY, Abilities.DAMP, Abilities.LIMBER, Abilities.SAND_VEIL,
         Abilities.STATIC, Abilities.VOLT_ABSORB, Abilities.WATER_ABSORB, Abilities.OBLIVIOUS,
-        Abilities.CLOUD_NINE, Abilities.COMPOUND_EYES, Abilities.INSOMNIA, Abilities.COLOR_CHANGE,
+        Abilities.CLOUD_NINE, Abilities.COMPOUND_EYES, Abilities.COMPETITIVE, Abilities.INSOMNIA, Abilities.COLOR_CHANGE,
         Abilities.IMMUNITY, Abilities.FLASH_FIRE, Abilities.SHIELD_DUST, Abilities.OWN_TEMPO,
         Abilities.SUCTION_CUPS, Abilities.INTIMIDATE, Abilities.SHADOW_TAG, Abilities.ROUGH_SKIN,
         Abilities.WONDER_GUARD, Abilities.LEVITATE, Abilities.EFFECT_SPORE, Abilities.SYNCHRONIZE,

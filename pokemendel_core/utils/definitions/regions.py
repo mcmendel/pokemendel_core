@@ -13,3 +13,4 @@ class Regions(EnumList):
     # Region Constants
     KANTO = "Kanto"
     JOHTO = "Johto"
+    HOENN = "Hoenn"

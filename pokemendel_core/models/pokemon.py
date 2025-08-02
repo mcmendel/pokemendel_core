@@ -48,7 +48,15 @@ class Pokemon:
         self.name = evolution_pokemon.name
         self.colors = evolution_pokemon.colors
         self.categories = evolution_pokemon.categories
-        self.supported_genders = evolution_pokemon.supported_genders
+        self.supported_genders = (
+            evolution_pokemon.supported_genders
+            if evolution_pokemon.supported_genders
+            else self.supported_genders
+        )
         self.num_legs = evolution_pokemon.num_legs
         self.nature = evolution_pokemon.nature
-        self.supported_abilities = evolution_pokemon.supported_abilities
+        self.supported_abilities = (
+            evolution_pokemon.supported_abilities
+            if evolution_pokemon.supported_abilities
+            else self.supported_abilities
+        )

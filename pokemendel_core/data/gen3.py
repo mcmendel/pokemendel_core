@@ -3320,6 +3320,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.OVERGROW],
     ),
     PokemonGen3.BAYLEEF: Pokemon(
         name=PokemonGen3.BAYLEEF,
@@ -3342,6 +3343,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.OVERGROW],
     ),
     PokemonGen3.MEGANIUM: Pokemon(
         name=PokemonGen3.MEGANIUM,
@@ -3361,6 +3363,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.OVERGROW],
     ),
     PokemonGen3.CYNDAQUIL: Pokemon(
         name=PokemonGen3.CYNDAQUIL,
@@ -3381,6 +3384,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.BLAZE],
     ),
     PokemonGen3.QUILAVA: Pokemon(
         name=PokemonGen3.QUILAVA,
@@ -3401,6 +3405,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.BLAZE],
     ),
     PokemonGen3.TYPHLOSION: Pokemon(
         name=PokemonGen3.TYPHLOSION,
@@ -3418,6 +3423,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.BLAZE],
     ),
     PokemonGen3.TOTODILE: Pokemon(
         name=PokemonGen3.TOTODILE,
@@ -3439,6 +3445,7 @@ NAME_TO_POKEMON = {
             Categories.WATERMON,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.TORRENT],
     ),
     PokemonGen3.CROCONAW: Pokemon(
         name=PokemonGen3.CROCONAW,
@@ -3460,6 +3467,7 @@ NAME_TO_POKEMON = {
             Categories.WATERMON,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.TORRENT],
     ),
     PokemonGen3.FERALIGATR: Pokemon(
         name=PokemonGen3.FERALIGATR,
@@ -3478,6 +3486,7 @@ NAME_TO_POKEMON = {
             Categories.WATERMON,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.TORRENT],
     ),
     PokemonGen3.SENTRET: Pokemon(
         name=PokemonGen3.SENTRET,
@@ -3498,6 +3507,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.RUN_AWAY, Abilities.KEEN_EYE],
     ),
     PokemonGen3.FURRET: Pokemon(
         name=PokemonGen3.FURRET,
@@ -3515,6 +3525,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.RUN_AWAY, Abilities.KEEN_EYE],
     ),
     PokemonGen3.HOOTHOOT: Pokemon(
         name=PokemonGen3.HOOTHOOT,
@@ -3536,6 +3547,7 @@ NAME_TO_POKEMON = {
             Categories.BIRD,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.INSOMNIA, Abilities.KEEN_EYE],
     ),
     PokemonGen3.NOCTOWL: Pokemon(
         name=PokemonGen3.NOCTOWL,
@@ -3554,6 +3566,7 @@ NAME_TO_POKEMON = {
             Categories.BIRD,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.INSOMNIA, Abilities.KEEN_EYE],
     ),
     PokemonGen3.LEDYBA: Pokemon(
         name=PokemonGen3.LEDYBA,
@@ -3575,6 +3588,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=6,
+        supported_abilities=[Abilities.SWARM, Abilities.EARLY_BIRD],
     ),
     PokemonGen3.LEDIAN: Pokemon(
         name=PokemonGen3.LEDIAN,
@@ -3593,6 +3607,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SWARM, Abilities.EARLY_BIRD],
     ),
     PokemonGen3.SPINARAK: Pokemon(
         name=PokemonGen3.SPINARAK,
@@ -3613,6 +3628,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=6,
+        supported_abilities=[Abilities.SWARM, Abilities.INSOMNIA],
     ),
     PokemonGen3.ARIADOS: Pokemon(
         name=PokemonGen3.ARIADOS,
@@ -3630,6 +3646,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.SWARM, Abilities.INSOMNIA],
     ),
     PokemonGen3.CROBAT: Pokemon(
         name=PokemonGen3.CROBAT,
@@ -3648,6 +3665,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.INNER_FOCUS],
     ),
     PokemonGen3.CHINCHOU: Pokemon(
         name=PokemonGen3.CHINCHOU,
@@ -3669,6 +3687,7 @@ NAME_TO_POKEMON = {
             Categories.FISH,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.VOLT_ABSORB, Abilities.ILLUMINATE],
     ),
     PokemonGen3.LANTURN: Pokemon(
         name=PokemonGen3.LANTURN,
@@ -3687,6 +3706,7 @@ NAME_TO_POKEMON = {
             Categories.FISH,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.VOLT_ABSORB, Abilities.ILLUMINATE],
     ),
     PokemonGen3.PICHU: Pokemon(
         name=PokemonGen3.PICHU,
@@ -3706,6 +3726,7 @@ NAME_TO_POKEMON = {
             Categories.MOUSE,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.STATIC],
     ),
     PokemonGen3.CLEFFA: Pokemon(
         name=PokemonGen3.CLEFFA,
@@ -3727,6 +3748,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
             Categories.HUMAN,
         ],
+        supported_abilities=[Abilities.CUTE_CHARM, Abilities.MAGIC_GUARD],
         num_legs=2,
         ),
     PokemonGen3.IGGLYBUFF: Pokemon(
@@ -3749,6 +3771,7 @@ NAME_TO_POKEMON = {
             Categories.FOOD,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.COMPETITIVE],
     ),
     PokemonGen3.TOGEPI: Pokemon(
         name=PokemonGen3.TOGEPI,
@@ -3770,6 +3793,7 @@ NAME_TO_POKEMON = {
             Categories.FOOD,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.HUSTLE, Abilities.SERENE_GRACE],
     ),
     PokemonGen3.TOGETIC: Pokemon(
         name=PokemonGen3.TOGETIC,
@@ -3789,6 +3813,7 @@ NAME_TO_POKEMON = {
             Categories.WING,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.HUSTLE, Abilities.SERENE_GRACE],
     ),
     PokemonGen3.NATU: Pokemon(
         name=PokemonGen3.NATU,
@@ -3810,6 +3835,7 @@ NAME_TO_POKEMON = {
             Categories.WING,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SYNCHRONIZE, Abilities.EARLY_BIRD],
     ),
     PokemonGen3.XATU: Pokemon(
         name=PokemonGen3.XATU,
@@ -3827,6 +3853,7 @@ NAME_TO_POKEMON = {
             Categories.WING,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SYNCHRONIZE, Abilities.EARLY_BIRD],
     ),
     PokemonGen3.MAREEP: Pokemon(
         name=PokemonGen3.MAREEP,
@@ -3849,6 +3876,7 @@ NAME_TO_POKEMON = {
             Categories.CATTLE,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.STATIC],
     ),
     PokemonGen3.FLAAFFY: Pokemon(
         name=PokemonGen3.FLAAFFY,
@@ -3871,6 +3899,7 @@ NAME_TO_POKEMON = {
             Categories.CATTLE,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.STATIC],
     ),
     PokemonGen3.AMPHAROS: Pokemon(
         name=PokemonGen3.AMPHAROS,
@@ -3890,6 +3919,7 @@ NAME_TO_POKEMON = {
             Categories.CATTLE,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.STATIC],
     ),
     PokemonGen3.BELLOSSOM: Pokemon(
         name=PokemonGen3.BELLOSSOM,
@@ -3909,6 +3939,7 @@ NAME_TO_POKEMON = {
             Categories.HUMAN,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.CHLOROPHYLL],
     ),
     PokemonGen3.MARILL: Pokemon(
         name=PokemonGen3.MARILL,
@@ -3930,6 +3961,7 @@ NAME_TO_POKEMON = {
             Categories.MOUSE,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.THICK_FAT, Abilities.HUGE_POWER],
     ),
     PokemonGen3.AZUMARILL: Pokemon(
         name=PokemonGen3.AZUMARILL,
@@ -3948,6 +3980,7 @@ NAME_TO_POKEMON = {
             Categories.MOUSE,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.THICK_FAT, Abilities.HUGE_POWER],
     ),
     PokemonGen3.SUDOWOODO: Pokemon(
         name=PokemonGen3.SUDOWOODO,
@@ -3965,6 +3998,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.STURDY, Abilities.ROCK_HEAD],
     ),
     PokemonGen3.POLITOED: Pokemon(
         name=PokemonGen3.POLITOED,
@@ -3985,6 +4019,7 @@ NAME_TO_POKEMON = {
             Categories.REPTILE,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.WATER_ABSORB, Abilities.DAMP],
     ),
     PokemonGen3.HOPPIP: Pokemon(
         name=PokemonGen3.HOPPIP,
@@ -4006,6 +4041,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.CHLOROPHYLL, Abilities.LEAF_GUARD],
     ),
     PokemonGen3.SKIPLOOM: Pokemon(
         name=PokemonGen3.SKIPLOOM,
@@ -4027,6 +4063,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.CHLOROPHYLL, Abilities.LEAF_GUARD],
     ),
     PokemonGen3.JUMPLUFF: Pokemon(
         name=PokemonGen3.JUMPLUFF,
@@ -4045,6 +4082,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.CHLOROPHYLL, Abilities.LEAF_GUARD],
     ),
     PokemonGen3.AIPOM: Pokemon(
         name=PokemonGen3.AIPOM,
@@ -4063,6 +4101,7 @@ NAME_TO_POKEMON = {
             Categories.APE,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.RUN_AWAY, Abilities.PICKUP],
     ),
     PokemonGen3.SUNKERN: Pokemon(
         name=PokemonGen3.SUNKERN,
@@ -4083,6 +4122,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.CHLOROPHYLL, Abilities.SOLAR_POWER],
     ),
     PokemonGen3.SUNFLORA: Pokemon(
         name=PokemonGen3.SUNFLORA,
@@ -4100,6 +4140,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.CHLOROPHYLL, Abilities.SOLAR_POWER],
     ),
     PokemonGen3.YANMA: Pokemon(
         name=PokemonGen3.YANMA,
@@ -4120,6 +4161,7 @@ NAME_TO_POKEMON = {
             Categories.DRAGON,
         ],
         num_legs=6,
+        supported_abilities=[Abilities.SPEED_BOOST, Abilities.COMPOUND_EYES],
     ),
     PokemonGen3.WOOPER: Pokemon(
         name=PokemonGen3.WOOPER,
@@ -4141,6 +4183,7 @@ NAME_TO_POKEMON = {
             Categories.FROG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.DAMP, Abilities.WATER_ABSORB],
     ),
     PokemonGen3.QUAGSIRE: Pokemon(
         name=PokemonGen3.QUAGSIRE,
@@ -4159,6 +4202,7 @@ NAME_TO_POKEMON = {
             Categories.FROG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.DAMP, Abilities.WATER_ABSORB],
     ),
     PokemonGen3.ESPEON: Pokemon(
         name=PokemonGen3.ESPEON,
@@ -4177,6 +4221,7 @@ NAME_TO_POKEMON = {
             Categories.DOG,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.SYNCHRONIZE],
     ),
     PokemonGen3.UMBREON: Pokemon(
         name=PokemonGen3.UMBREON,
@@ -4195,6 +4240,7 @@ NAME_TO_POKEMON = {
             Categories.DOG,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.SYNCHRONIZE],
     ),
     PokemonGen3.MURKROW: Pokemon(
         name=PokemonGen3.MURKROW,
@@ -4214,6 +4260,7 @@ NAME_TO_POKEMON = {
             Categories.FANTASY,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SUPER_LUCK, Abilities.INSOMNIA],
     ),
     PokemonGen3.SLOWKING: Pokemon(
         name=PokemonGen3.SLOWKING,
@@ -4233,6 +4280,7 @@ NAME_TO_POKEMON = {
             Categories.SLOTH,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.OBLIVIOUS, Abilities.OWN_TEMPO],
     ),
     PokemonGen3.MISDREAVUS: Pokemon(
         name=PokemonGen3.MISDREAVUS,
@@ -4251,6 +4299,7 @@ NAME_TO_POKEMON = {
             Categories.HUMAN,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.LEVITATE],
     ),
     PokemonGen3.UNOWN: Pokemon(
         name=PokemonGen3.UNOWN,
@@ -4270,6 +4319,7 @@ NAME_TO_POKEMON = {
             Categories.FOOD,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.LEVITATE],
     ),
     PokemonGen3.WOBBUFFET: Pokemon(
         name=PokemonGen3.WOBBUFFET,
@@ -4287,6 +4337,7 @@ NAME_TO_POKEMON = {
             Categories.ITEM,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SHADOW_TAG],
     ),
     PokemonGen3.GIRAFARIG: Pokemon(
         name=PokemonGen3.GIRAFARIG,
@@ -4304,6 +4355,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.INNER_FOCUS, Abilities.EARLY_BIRD],
     ),
     PokemonGen3.PINECO: Pokemon(
         name=PokemonGen3.PINECO,
@@ -4324,6 +4376,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.STURDY],
     ),
     PokemonGen3.FORRETRESS: Pokemon(
         name=PokemonGen3.FORRETRESS,
@@ -4341,6 +4394,7 @@ NAME_TO_POKEMON = {
             Categories.PLANT,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.STURDY],
     ),
     PokemonGen3.DUNSPARCE: Pokemon(
         name=PokemonGen3.DUNSPARCE,
@@ -4359,6 +4413,7 @@ NAME_TO_POKEMON = {
             Categories.SNAKE,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.SERENE_GRACE, Abilities.RUN_AWAY],
     ),
     PokemonGen3.GLIGAR: Pokemon(
         name=PokemonGen3.GLIGAR,
@@ -4376,6 +4431,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.HYPER_CUTTER, Abilities.SAND_VEIL],
     ),
     PokemonGen3.STEELIX: Pokemon(
         name=PokemonGen3.STEELIX,
@@ -4394,6 +4450,7 @@ NAME_TO_POKEMON = {
             Categories.SNAKE,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.ROCK_HEAD, Abilities.STURDY],
     ),
     PokemonGen3.SNUBBULL: Pokemon(
         name=PokemonGen3.SNUBBULL,
@@ -4415,6 +4472,7 @@ NAME_TO_POKEMON = {
             Categories.DOG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.INTIMIDATE, Abilities.RUN_AWAY],
     ),
     PokemonGen3.GRANBULL: Pokemon(
         name=PokemonGen3.GRANBULL,
@@ -4433,6 +4491,7 @@ NAME_TO_POKEMON = {
             Categories.DOG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.INTIMIDATE, Abilities.QUICK_FEET],
     ),
     PokemonGen3.QWILFISH: Pokemon(
         name=PokemonGen3.QWILFISH,
@@ -4451,6 +4510,7 @@ NAME_TO_POKEMON = {
             Categories.FISH,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.POISON_POINT, Abilities.SWIFT_SWIM],
     ),
     PokemonGen3.SCIZOR: Pokemon(
         name=PokemonGen3.SCIZOR,
@@ -4470,6 +4530,7 @@ NAME_TO_POKEMON = {
             Categories.WEAPON,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SWARM, Abilities.TECHNICIAN],
     ),
     PokemonGen3.SHUCKLE: Pokemon(
         name=PokemonGen3.SHUCKLE,
@@ -4489,6 +4550,7 @@ NAME_TO_POKEMON = {
             Categories.TURTLE,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.STURDY, Abilities.GLUTTONY],
     ),
     PokemonGen3.HERACROSS: Pokemon(
         name=PokemonGen3.HERACROSS,
@@ -4507,6 +4569,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SWARM, Abilities.GUTS],
     ),
     PokemonGen3.SNEASEL: Pokemon(
         name=PokemonGen3.SNEASEL,
@@ -4524,6 +4587,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.INNER_FOCUS, Abilities.KEEN_EYE],
     ),
     PokemonGen3.TEDDIURSA: Pokemon(
         name=PokemonGen3.TEDDIURSA,
@@ -4545,6 +4609,7 @@ NAME_TO_POKEMON = {
             Categories.BEAR,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.PICKUP, Abilities.QUICK_FEET],
     ),
     PokemonGen3.URSARING: Pokemon(
         name=PokemonGen3.URSARING,
@@ -4563,6 +4628,7 @@ NAME_TO_POKEMON = {
             Categories.BEAR,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.GUTS, Abilities.QUICK_FEET],
     ),
     PokemonGen3.SLUGMA: Pokemon(
         name=PokemonGen3.SLUGMA,
@@ -4584,6 +4650,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.MAGMA_ARMOR, Abilities.FLAME_BODY],
     ),
     PokemonGen3.MAGCARGO: Pokemon(
         name=PokemonGen3.MAGCARGO,
@@ -4602,6 +4669,7 @@ NAME_TO_POKEMON = {
             Categories.BUG,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.MAGMA_ARMOR, Abilities.FLAME_BODY],
     ),
     PokemonGen3.SWINUB: Pokemon(
         name=PokemonGen3.SWINUB,
@@ -4624,6 +4692,7 @@ NAME_TO_POKEMON = {
             Categories.PIG,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.OBLIVIOUS, Abilities.SNOW_CLOAK],
     ),
     PokemonGen3.PILOSWINE: Pokemon(
         name=PokemonGen3.PILOSWINE,
@@ -4644,6 +4713,7 @@ NAME_TO_POKEMON = {
             Categories.PREHISTORIC,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.OBLIVIOUS, Abilities.SNOW_CLOAK],
     ),
     PokemonGen3.CORSOLA: Pokemon(
         name=PokemonGen3.CORSOLA,
@@ -4662,6 +4732,7 @@ NAME_TO_POKEMON = {
             Categories.WATERMON,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.HUSTLE, Abilities.NATURAL_CURE],
     ),
     PokemonGen3.REMORAID: Pokemon(
         name=PokemonGen3.REMORAID,
@@ -4683,6 +4754,7 @@ NAME_TO_POKEMON = {
             Categories.FISH,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.HUSTLE, Abilities.SNIPER],
     ),
     PokemonGen3.OCTILLERY: Pokemon(
         name=PokemonGen3.OCTILLERY,
@@ -4701,6 +4773,7 @@ NAME_TO_POKEMON = {
             Categories.FOOD,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.SUCTION_CUPS, Abilities.SNIPER],
     ),
     PokemonGen3.DELIBIRD: Pokemon(
         name=PokemonGen3.DELIBIRD,
@@ -4719,6 +4792,7 @@ NAME_TO_POKEMON = {
             Categories.FANTASY,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.VITAL_SPIRIT, Abilities.HUSTLE],
     ),
     PokemonGen3.MANTINE: Pokemon(
         name=PokemonGen3.MANTINE,
@@ -4739,6 +4813,7 @@ NAME_TO_POKEMON = {
             Categories.FOOD,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.WATER_ABSORB, Abilities.SWIFT_SWIM],
     ),
     PokemonGen3.SKARMORY: Pokemon(
         name=PokemonGen3.SKARMORY,
@@ -4758,6 +4833,7 @@ NAME_TO_POKEMON = {
             Categories.WEAPON,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.KEEN_EYE, Abilities.STURDY],
     ),
     PokemonGen3.HOUNDOUR: Pokemon(
         name=PokemonGen3.HOUNDOUR,
@@ -4779,6 +4855,7 @@ NAME_TO_POKEMON = {
             Categories.DOG,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.EARLY_BIRD, Abilities.FLASH_FIRE],
     ),
     PokemonGen3.HOUNDOOM: Pokemon(
         name=PokemonGen3.HOUNDOOM,
@@ -4797,6 +4874,7 @@ NAME_TO_POKEMON = {
             Categories.DOG,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.EARLY_BIRD, Abilities.FLASH_FIRE],
     ),
     PokemonGen3.KINGDRA: Pokemon(
         name=PokemonGen3.KINGDRA,
@@ -4816,6 +4894,7 @@ NAME_TO_POKEMON = {
             Categories.DRAGON,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.SWIFT_SWIM, Abilities.SNIPER],
     ),
     PokemonGen3.PHANPY: Pokemon(
         name=PokemonGen3.PHANPY,
@@ -4836,6 +4915,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.PICKUP],
     ),
     PokemonGen3.DONPHAN: Pokemon(
         name=PokemonGen3.DONPHAN,
@@ -4853,6 +4933,7 @@ NAME_TO_POKEMON = {
             Categories.MAMMAL,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.STURDY],
     ),
     PokemonGen3.PORYGON2: Pokemon(
         name=PokemonGen3.PORYGON2,
@@ -4870,6 +4951,7 @@ NAME_TO_POKEMON = {
             Categories.ITEM,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.TRACE, Abilities.DOWNLOAD],
     ),
     PokemonGen3.STANTLER: Pokemon(
         name=PokemonGen3.STANTLER,
@@ -4888,6 +4970,7 @@ NAME_TO_POKEMON = {
             Categories.FOOD,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.INTIMIDATE, Abilities.FRISK],
     ),
     PokemonGen3.SMEARGLE: Pokemon(
         name=PokemonGen3.SMEARGLE,
@@ -4906,6 +4989,7 @@ NAME_TO_POKEMON = {
             Categories.DOG,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.OWN_TEMPO, Abilities.TECHNICIAN],
     ),
     PokemonGen3.TYROGUE: Pokemon(
         name=PokemonGen3.TYROGUE,
@@ -4929,6 +5013,7 @@ NAME_TO_POKEMON = {
             Categories.HUMAN,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.GUTS, Abilities.STEADFAST],
     ),
     PokemonGen3.HITMONTOP: Pokemon(
         name=PokemonGen3.HITMONTOP,
@@ -4947,6 +5032,7 @@ NAME_TO_POKEMON = {
             Categories.HUMAN,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.INTIMIDATE, Abilities.TECHNICIAN],
     ),
     PokemonGen3.SMOOCHUM: Pokemon(
         name=PokemonGen3.SMOOCHUM,
@@ -4969,6 +5055,7 @@ NAME_TO_POKEMON = {
             Categories.HUMAN,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.OBLIVIOUS, Abilities.FOREWARN],
     ),
     PokemonGen3.ELEKID: Pokemon(
         name=PokemonGen3.ELEKID,
@@ -4991,6 +5078,7 @@ NAME_TO_POKEMON = {
             Categories.ITEM,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.STATIC],
     ),
     PokemonGen3.MAGBY: Pokemon(
         name=PokemonGen3.MAGBY,
@@ -5014,6 +5102,7 @@ NAME_TO_POKEMON = {
             Categories.DUCK,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.FLAME_BODY],
     ),
     PokemonGen3.MILTANK: Pokemon(
         name=PokemonGen3.MILTANK,
@@ -5034,6 +5123,7 @@ NAME_TO_POKEMON = {
             Categories.COW,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.THICK_FAT, Abilities.SCRAPPY],
     ),
     PokemonGen3.BLISSEY: Pokemon(
         name=PokemonGen3.BLISSEY,
@@ -5053,6 +5143,7 @@ NAME_TO_POKEMON = {
             Categories.HUMAN,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.NATURAL_CURE, Abilities.SERENE_GRACE],
     ),
     PokemonGen3.RAIKOU: Pokemon(
         name=PokemonGen3.RAIKOU,
@@ -5071,6 +5162,7 @@ NAME_TO_POKEMON = {
             Categories.CAT,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.PRESSURE],
     ),
     PokemonGen3.ENTEI: Pokemon(
         name=PokemonGen3.ENTEI,
@@ -5089,6 +5181,7 @@ NAME_TO_POKEMON = {
             Categories.CAT,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.PRESSURE],
     ),
     PokemonGen3.SUICUNE: Pokemon(
         name=PokemonGen3.SUICUNE,
@@ -5107,6 +5200,7 @@ NAME_TO_POKEMON = {
             Categories.CAT,
         ],
         num_legs=4,
+        supported_abilities=[Abilities.PRESSURE],
     ),
     PokemonGen3.LARVITAR: Pokemon(
         name=PokemonGen3.LARVITAR,
@@ -5129,6 +5223,7 @@ NAME_TO_POKEMON = {
             Categories.FANTASY,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.GUTS],
     ),
     PokemonGen3.PUPITAR: Pokemon(
         name=PokemonGen3.PUPITAR,
@@ -5151,6 +5246,7 @@ NAME_TO_POKEMON = {
             Categories.FANTASY,
         ],
         num_legs=0,
+        supported_abilities=[Abilities.SHED_SKIN],
     ),
     PokemonGen3.TYRANITAR: Pokemon(
         name=PokemonGen3.TYRANITAR,
@@ -5170,6 +5266,7 @@ NAME_TO_POKEMON = {
             Categories.FANTASY,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.SAND_STREAM],
     ),
     PokemonGen3.LUGIA: Pokemon(
         name=PokemonGen3.LUGIA,
@@ -5188,6 +5285,7 @@ NAME_TO_POKEMON = {
             Categories.DRAGON,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.PRESSURE],
     ),
     PokemonGen3.HO_OH: Pokemon(
         name=PokemonGen3.HO_OH,
@@ -5206,6 +5304,7 @@ NAME_TO_POKEMON = {
             Categories.BIRD,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.PRESSURE],
     ),
     PokemonGen3.CELEBI: Pokemon(
         name=PokemonGen3.CELEBI,
@@ -5224,5 +5323,6 @@ NAME_TO_POKEMON = {
             Categories.FANTASY,
         ],
         num_legs=2,
+        supported_abilities=[Abilities.NATURAL_CURE],
     ),
 }

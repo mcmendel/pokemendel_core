@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pokemendel_core"
-version = "0.4.2"
+version = "0.4.3"
 description = "A Python package providing comprehensive data structures and utilities for working with Pokémon from Generations 1 and 2"
 readme = "README.md"
 requires-python = ">=3.8"

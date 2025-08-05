@@ -11,6 +11,7 @@ from ..utils.definitions.stats import Stats
 from ..utils.definitions.genders import Genders
 from ..utils.definitions.abilities import Abilities
 from .utils.names import PokemonNames as PokemonGen3
+from .utils.evolutions import update_evolution
 from .gen2 import NAME_TO_POKEMON as NAME_TO_POKEMON_GEN2
 from dataclasses import replace
 from copy import deepcopy
@@ -274,6 +275,33 @@ NAME_TO_POKEMON = {
     for pokemon_name, pokemon in NAME_TO_POKEMON_GEN2.items()
 }
 
+# update_evolution(NAME_TO_POKEMON, PokemonGen3., PokemonGen3.,)
+update_evolution(NAME_TO_POKEMON, PokemonGen3.PIKACHU, PokemonGen3.RAICHU, Evolution(name="", level=26, evolution_type=EvolutionType.STONE, item=Item.THUNDER_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.NIDORINA, PokemonGen3.NIDOQUEEN, Evolution(name="", level=53, evolution_type=EvolutionType.STONE, item=Item.MOON_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.NIDORINO, PokemonGen3.NIDOKING, Evolution(name=PokemonGen3.NIDOKING, level=19, evolution_type=EvolutionType.STONE, item=Item.MOON_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.CLEFAIRY, PokemonGen3.CLEFABLE, Evolution(name="", level=45, item=Item.MOON_STONE, evolution_type=EvolutionType.STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.VULPIX, PokemonGen3.NINETALES, Evolution(name="", level=29, evolution_type=EvolutionType.STONE, item=Item.FIRE_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.JIGGLYPUFF, PokemonGen3.WIGGLYTUFF, Evolution(name="", level=44, evolution_type=EvolutionType.STONE, item=Item.MOON_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.GLOOM, PokemonGen3.VILEPLUME, Evolution(name="", level=24, evolution_type=EvolutionType.STONE, item=Item.LEAF_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.GLOOM, PokemonGen3.BELLOSSOM, Evolution(name="", level=44, evolution_type=EvolutionType.STONE, item=Item.SUN_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.GROWLITHE, PokemonGen3.ARCANINE, Evolution(name="", level=49, evolution_type=EvolutionType.STONE, item=Item.FIRE_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.POLIWHIRL, PokemonGen3.POLIWRATH, Evolution(name="", level=35, evolution_type=EvolutionType.STONE, item=Item.WATER_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.POLIWHIRL, PokemonGen3.POLITOED, Evolution(name="", evolution_type=EvolutionType.TRADE, should_hold=True, item=Item.KINGS_ROCK),)
+update_evolution(NAME_TO_POKEMON, PokemonGen3.WEEPINBELL, PokemonGen3.VICTREEBEL, Evolution(name="", level=42, evolution_type=EvolutionType.STONE, item=Item.LEAF_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.SLOWPOKE, PokemonGen3.SLOWKING, Evolution(name="", evolution_type=EvolutionType.TRADE, item=Item.KINGS_ROCK, level=34, should_hold=True))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.SHELLDER, PokemonGen3.CLOYSTER, Evolution(name="", level=49, evolution_type=EvolutionType.STONE, item=Item.WATER_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.ONIX, PokemonGen3.STEELIX, Evolution(name="", evolution_type=EvolutionType.TRADE, level=49, item=Item.METAL_COAT, should_hold=True))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.EXEGGCUTE, PokemonGen3.EXEGGUTOR, Evolution(name="", level=19, evolution_type=EvolutionType.STONE, item=Item.LEAF_STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.CHANSEY, PokemonGen3.BLISSEY, Evolution(name="", evolution_type=EvolutionType.FRIENDSHIP, level=28))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.STARYU, PokemonGen3.STARMIE, Evolution(name="", level=28, item=Item.WATER_STONE, evolution_type=EvolutionType.STONE))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.SCYTHER, PokemonGen3.SCIZOR, Evolution(name="", level=26, evolution_type=EvolutionType.TRADE, item=Item.MOON_STONE, should_hold=True))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.PICHU, PokemonGen3.PIKACHU, Evolution(name='', evolution_type=EvolutionType.FRIENDSHIP, level=11))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.CLEFFA, PokemonGen3.CLEFAIRY, Evolution(name='', evolution_type=EvolutionType.FRIENDSHIP, level=13))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.IGGLYBUFF, PokemonGen3.JIGGLYPUFF, Evolution(name='', evolution_type=EvolutionType.FRIENDSHIP, level=14))
+update_evolution(NAME_TO_POKEMON, PokemonGen3.SUNKERN, PokemonGen3.SUNFLORA, Evolution(name='', evolution_type=EvolutionType.STONE, item=Item.SUN_STONE, level=13))
+
+
+# update_evolution(NAME_TO_POKEMON, PokemonGen3., PokemonGen3.,)
 _GEN3_POKEMONS = {
     PokemonGen3.TREECKO: Pokemon(
         name=PokemonGen3.TREECKO,

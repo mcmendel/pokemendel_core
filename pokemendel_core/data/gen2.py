@@ -966,7 +966,7 @@ NAME_TO_POKEMON[PokemonGen2.GOLBAT].evolves_to = [Evolution(name=PokemonGen2.CRO
 NAME_TO_POKEMON[PokemonGen2.GLOOM].evolves_to.append(Evolution(name=PokemonGen2.BELLOSSOM, level=44, evolution_type=EvolutionType.STONE, item=Item.SUN_STONE))
 NAME_TO_POKEMON[PokemonGen2.POLIWHIRL].evolves_to = [
     Evolution(name=PokemonGen2.POLIWRATH, level=35, evolution_type=EvolutionType.STONE, item=Item.WATER_STONE),
-    Evolution(name=PokemonGen2.SLOWKING, evolution_type=EvolutionType.TRADE, should_hold=True, item=Item.KINGS_ROCK),
+    Evolution(name=PokemonGen2.POLITOED, evolution_type=EvolutionType.TRADE, should_hold=True, item=Item.KINGS_ROCK),
 ]
 NAME_TO_POKEMON[PokemonGen2.GLOOM].evolves_to.append(Evolution(name=PokemonGen2.BELLOSSOM, level=44, evolution_type=EvolutionType.STONE, item=Item.SUN_STONE))
 NAME_TO_POKEMON[PokemonGen2.MAGNEMITE].types.append(Types.STEEL)

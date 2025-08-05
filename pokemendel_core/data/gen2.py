@@ -991,6 +991,10 @@ NAME_TO_POKEMON[PokemonGen2.EEVEE].evolves_to.extend([
 NAME_TO_POKEMON[PokemonGen2.PORYGON].evolves_to = [
     Evolution(name=PokemonGen2.PORYGON2, evolution_type=EvolutionType.TRADE, item=Item.UPGRADE, should_hold=True)
 ]
+NAME_TO_POKEMON[PokemonGen2.SLOWPOKE].evolves_to = [
+    Evolution(name=PokemonGen2.SLOWBRO),
+    Evolution(name=PokemonGen2.SLOWKING, evolution_type=EvolutionType.TRADE, item=Item.KINGS_ROCK, should_hold=True)
+]
 
 
 _GEN2_POKEMONS = {

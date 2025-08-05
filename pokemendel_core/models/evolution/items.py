@@ -27,6 +27,9 @@ class Item(Enum):
     METAL_COAT = "Metal Coat"
     DRAGON_SCALE = "Dragon Scale"
     UPGRADE = "Upgrade"
+    PRISM_SCALE = "Prism Scale"
+    DEEP_SEA_TOOTH = "Depp Sea Tooth"
+    DEEP_SEA_SCALE = "Deep Sea Scale"
 
     @staticmethod
     def from_str(val: str) -> 'Item':

@@ -31,6 +31,7 @@ class Abilities(EnumList):
     INSOMNIA = "Insomnia"
     COLOR_CHANGE = "Color Change"
     IMMUNITY = "Immunity"
+    WIND_RIDER = "Wind Rider"
     FLASH_FIRE = "Flash Fire"
     SHIELD_DUST = "Shield Dust"
     OWN_TEMPO = "Own Tempo"
@@ -351,6 +352,7 @@ def get_ability_description(ability: str) -> str:
         Abilities.BAD_DREAMS: "Damages sleeping opponents each turn.",
         
         # Generation 3 abilities
+        Abilities.WIND_RIDER: "Gives immunity to wind moves, and causes the Pokémon's Attack to increase by one stage when hit by one.",
         Abilities.PICKPOCKET: "Steals opponent's item when hit by contact move.",
         Abilities.SHEER_FORCE: "Removes additional effects for more power.",
         Abilities.CONTRARY: "Stat changes are reversed.",

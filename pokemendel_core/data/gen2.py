@@ -923,8 +923,41 @@ _GEN1_STATS = {
     ),
 }
 
+_GEN1_GENDERS = {
+    PokemonGen2.NIDORAN_F: [Genders.FEMALE],
+    PokemonGen2.NIDORINA: [Genders.FEMALE],
+    PokemonGen2.NIDOQUEEN: [Genders.FEMALE],
+    PokemonGen2.NIDORAN_M: [Genders.MALE],
+    PokemonGen2.NIDORINO: [Genders.MALE],
+    PokemonGen2.NIDOKING: [Genders.MALE],
+    PokemonGen2.MAGNEMITE: [Genders.GENDERLESS],
+    PokemonGen2.MAGNETON: [Genders.GENDERLESS],
+    PokemonGen2.VOLTORB: [Genders.GENDERLESS],
+    PokemonGen2.ELECTRODE: [Genders.GENDERLESS],
+    PokemonGen2.HITMONLEE: [Genders.MALE],
+    PokemonGen2.HITMONCHAN: [Genders.MALE],
+    PokemonGen2.CHANSEY: [Genders.FEMALE],
+    PokemonGen2.KANGASKHAN: [Genders.FEMALE],
+    PokemonGen2.STARYU: [Genders.GENDERLESS],
+    PokemonGen2.STARMIE: [Genders.GENDERLESS],
+    PokemonGen2.JYNX: [Genders.FEMALE],
+    PokemonGen2.TAUROS: [Genders.MALE],
+    PokemonGen2.DITTO: [Genders.GENDERLESS],
+    PokemonGen2.PORYGON: [Genders.GENDERLESS],
+    PokemonGen2.ARTICUNO: [Genders.GENDERLESS],
+    PokemonGen2.MOLTRES: [Genders.GENDERLESS],
+    PokemonGen2.ZAPDOS: [Genders.GENDERLESS],
+    PokemonGen2.MEWTWO: [Genders.GENDERLESS],
+    PokemonGen2.MEW: [Genders.GENDERLESS],
+}
+
 NAME_TO_POKEMON = {
-    pokemon_name: replace(deepcopy(pokemon), gen=2, stats=_GEN1_STATS[pokemon_name])
+    pokemon_name: replace(
+        deepcopy(pokemon),
+        gen=2,
+        stats=_GEN1_STATS[pokemon_name],
+        supported_genders=_GEN1_GENDERS.get(pokemon_name, [Genders.MALE, Genders.FEMALE])
+    )
     for pokemon_name, pokemon in NAME_TO_POKEMON_GEN1.items()
 }
 
@@ -2597,7 +2630,7 @@ _GEN2_POKEMONS = {
         gen=2,
         types=[Types.FIGHTING],
         colors=[Colors.BROWN, Colors.BLUE],
-        supported_genders=[Genders.MALE, Genders.FEMALE],
+        supported_genders=[Genders.MALE],
         stats=Stats(
             attack=95,
             defence=95,

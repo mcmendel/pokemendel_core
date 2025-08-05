@@ -1768,7 +1768,7 @@ _GEN2_POKEMONS = {
         gen=2,
         types=[Types.GRASS],
         evolves_to=[
-            Evolution(name=PokemonGen2.SUNFLORA)
+            Evolution(name=PokemonGen2.SUNFLORA, evolution_type=EvolutionType.STONE, item=Item.SUN_STONE, level=13)
         ],
         colors=[Colors.YELLOW, Colors.BROWN, Colors.GREEN],
         supported_genders=[Genders.MALE, Genders.FEMALE],

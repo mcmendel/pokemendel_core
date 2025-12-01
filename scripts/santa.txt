@@ -1,0 +1,6 @@
+Rimon -> Nadav
+Yamit -> Rimon
+Nir -> Vera
+Yuvi -> Nir
+Vera -> Yuvi
+Nadav -> Yamit

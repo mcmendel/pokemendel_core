@@ -54,7 +54,7 @@ class Pokemon:
             else self.supported_genders
         )
         self.num_legs = evolution_pokemon.num_legs
-        self.nature = evolution_pokemon.nature
+        self.nature = self.nature
         self.supported_abilities = (
             evolution_pokemon.supported_abilities
             if evolution_pokemon.supported_abilities

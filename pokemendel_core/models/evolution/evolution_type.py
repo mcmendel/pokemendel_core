@@ -24,6 +24,8 @@ class EvolutionType(Enum):
     FRIENDSHIP = "friendship"
     RANDOM = "Random"
     TIME = "time"  # Evolution based on time of day (day/night)
+    GYM = "gym"
+    LOCATION = "location"
 
     @staticmethod
     def from_str(val: str) -> 'EvolutionType':

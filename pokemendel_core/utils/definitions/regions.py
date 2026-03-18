@@ -14,3 +14,4 @@ class Regions(EnumList):
     KANTO = "Kanto"
     JOHTO = "Johto"
     HOENN = "Hoenn"
+    SINNOH = "Sinnoh"

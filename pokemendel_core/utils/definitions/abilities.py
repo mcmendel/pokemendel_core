@@ -13,6 +13,7 @@ class Abilities(EnumList):
     
     # Generation 1 Abilities (introduced in Gen 3)
     STENCH = "Stench"
+    SHARPNESS = "Sharpness"
     NEUTRALIZING_GAS = "Neutralizing Gas"
     DRIZZLE = "Drizzle"
     SPEED_BOOST = "Speed Boost"
@@ -239,6 +240,7 @@ def get_ability_description(ability: str) -> str:
         Abilities.CLOUD_NINE: "Negates weather effects.",
         Abilities.COMPOUND_EYES: "Increases accuracy of moves.",
         Abilities.COMPETITIVE: "aises the ability-bearer's Special Attack by two stages when hit by a stat-lowering move.",
+        Abilities.SHARPNESS: "Sharpness increases the power of all slicing moves by 50%.",
         Abilities.INSOMNIA: "Cannot fall asleep.",
         Abilities.COLOR_CHANGE: "Changes type to match the last move used against it.",
         Abilities.IMMUNITY: "Cannot be poisoned.",
@@ -458,6 +460,10 @@ def get_abilities_by_generation(gen: int) -> List[str]:
         Abilities.IRON_BARBS, Abilities.ZEN_MODE, Abilities.VICTORY_STAR, Abilities.TURBOBLAZE,
         Abilities.TERAVOLT,
     ]
+
+    gen_4_abilities = [
+        Abilities.SHARPNESS,
+    ]
     
     if gen == 1:
         return gen_1_abilities
@@ -465,6 +471,8 @@ def get_abilities_by_generation(gen: int) -> List[str]:
         return gen_2_abilities
     elif gen == 3:
         return gen_3_abilities
+    elif gen == 4:
+        return gen_4_abilities
     else:
         raise ValueError(f"Invalid generation {gen}. Must be 1, 2, or 3.")
 

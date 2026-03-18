@@ -21,8 +21,13 @@ class Item(Enum):
     FIRE_STONE = "Fire Stone"
     LEAF_STONE = "Leaf Stone"
     THUNDER_STONE = "Thunder Stone"
+    ICE_STONE = "Ice Stone"
     MOON_STONE = "Moon Stone"
     SUN_STONE = "Sun Stone"
+    SHINY_STONE = "Shiny Stone"
+    DUSK_STONE = "Dusk Stone"
+    DAWN_STONE = "Dawn Stone"
+    OVAL_STONE = "Oval Stone"
     KINGS_ROCK = "Kings Rock"
     METAL_COAT = "Metal Coat"
     DRAGON_SCALE = "Dragon Scale"
@@ -30,6 +35,13 @@ class Item(Enum):
     PRISM_SCALE = "Prism Scale"
     DEEP_SEA_TOOTH = "Depp Sea Tooth"
     DEEP_SEA_SCALE = "Deep Sea Scale"
+    PROTECTOR = "Protector"
+    ELECTRIZIER = "Electrizier"
+    MAGMARIZER = "Magmarizer"
+    DUBIOUS_DISC = "Dubious Disc"
+    RAZOR_FANG = "Razor Fang"
+    RAZOR_CLAW = "Razor Claw"
+    REAPER_CLOTH = "Reaper Cloth"
 
     @staticmethod
     def from_str(val: str) -> 'Item':

@@ -2684,7 +2684,7 @@ _GEN3_POKEMONS = {
         gen=3,
         types=[Types.WATER],
         evolves_to=[
-            Evolution(name=PokemonGen3.MILTOIC, evolution_type=EvolutionType.TRADE, item=Item.PRISM_SCALE, should_hold=True, level=20),
+            Evolution(name=PokemonGen3.MILOTIC, evolution_type=EvolutionType.TRADE, item=Item.PRISM_SCALE, should_hold=True, level=20),
         ],
         colors=[Colors.BROWN, Colors.BLUE],
         supported_genders=[Genders.MALE, Genders.FEMALE],
@@ -2705,8 +2705,8 @@ _GEN3_POKEMONS = {
             Abilities.OBLIVIOUS,
         ],
     ),
-    PokemonGen3.MILTOIC: Pokemon(
-        name=PokemonGen3.MILTOIC,
+    PokemonGen3.MILOTIC: Pokemon(
+        name=PokemonGen3.MILOTIC,
         gen=3,
         types=[Types.WATER],
         evolves_to=[],

@@ -1,9 +1,10 @@
 from .gen1 import NAME_TO_POKEMON as GEN1_NAME_TO_POKEMON, Pokemon
 from .gen2 import NAME_TO_POKEMON as GEN2_NAME_TO_POKEMON
 from .gen3 import NAME_TO_POKEMON as GEN3_NAME_TO_POKEMON
+from .gen4 import NAME_TO_POKEMON as GEN4_NAME_TO_POKEMON
 from typing import Dict, Optional
 
-__all__ = ["GEN1_NAME_TO_POKEMON", "GEN2_NAME_TO_POKEMON"]
+__all__ = ["GEN1_NAME_TO_POKEMON", "GEN2_NAME_TO_POKEMON", "GEN3_NAME_TO_POKEMON", "GEN4_NAME_TO_POKEMON"]
 
 
 def fetch_pokemon(name: str, gen: int) -> Pokemon:
@@ -13,6 +14,8 @@ def fetch_pokemon(name: str, gen: int) -> Pokemon:
         return GEN2_NAME_TO_POKEMON[name]
     elif gen == 3:
         return GEN3_NAME_TO_POKEMON[name]
+    elif gen == 4:
+        return GEN4_NAME_TO_POKEMON[name]
     raise ValueError(f"No data for generation {gen}")
 
 
@@ -23,6 +26,8 @@ def map_gen_pokemons(gen: int) -> Dict[str, Pokemon]:
         return GEN2_NAME_TO_POKEMON
     elif gen == 3:
         return GEN3_NAME_TO_POKEMON
+    elif gen == 4:
+        return GEN4_NAME_TO_POKEMON
     raise ValueError(f"No data for generation {gen}")
 
 def list_gen_pokemons(gen: int) -> list[Pokemon]:

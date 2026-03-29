@@ -238,8 +238,9 @@ def get_marked_pokemon_entries(gen: int) -> list[MarkedPokemonEntry]:
 
         full_path = get_full_evolution_path(pokemon_map, name, base)
         all_level = full_path and all(e.evolution_type == EvolutionType.LEVEL for e in full_path)
+        has_special = any(e.special_information for e in full_path)
 
-        if full_path and not all_level:
+        if full_path and (not all_level or has_special):
             details = format_evolution_path(full_path)
         else:
             details = ""
@@ -261,7 +262,7 @@ def format_single_evolution(evo: Evolution) -> str:
     Returns:
         Formatted string for this evolution step.
     """
-    if evo.evolution_type == EvolutionType.LEVEL:
+    if evo.evolution_type == EvolutionType.LEVEL and not evo.special_information:
         return "(level)"
     parts: list[str] = []
     if evo.level is not None:

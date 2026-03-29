@@ -119,7 +119,7 @@ update_evolution(NAME_TO_POKEMON, PokemonGen4.PORYGON2, PokemonGen4.PORYGON_Z, E
 
 # togepi
 update_evolution(NAME_TO_POKEMON, PokemonGen4.TOGEPI, PokemonGen4.TOGETIC, Evolution(name="", evolution_type=EvolutionType.FRIENDSHIP, special_information="Second gym"))
-update_evolution(NAME_TO_POKEMON, PokemonGen4.TOGEPI, PokemonGen4.TOGETIC, Evolution(name="", evolution_type=EvolutionType.STONE, item=Item.SHINY_STONE, special_information="Sixth gym"))
+update_evolution(NAME_TO_POKEMON, PokemonGen4.TOGETIC, PokemonGen4.TOGEKISS, Evolution(name="", evolution_type=EvolutionType.STONE, item=Item.SHINY_STONE, special_information="Sixth gym"))
 
 # Azurill
 update_evolution(NAME_TO_POKEMON, PokemonGen4.AZURILL, PokemonGen4.MARILL, Evolution(name="", evolution_type=EvolutionType.FRIENDSHIP, level=10))

@@ -1,8 +1,13 @@
 """
-Utility for downloading Pokemon-related images from Google Image Search.
+Utility for downloading Pokemon-related images.
+
+Uses PokeAPI for Pokemon sprites (reliable, structured API) and falls back
+to Google Image Search scraping for gym badges and type symbols.
 """
+import base64
 import logging
 import os
+import re
 from typing import Optional
 from urllib.parse import urljoin
 
@@ -36,23 +41,47 @@ class GoogleImageSearch:
     def __init__(self, max_retries: int = 3):
         self.max_retries = max_retries
 
-    def _validate_image(self, img_data: bytes) -> bool:
-        """Validate that the downloaded data is a valid image.
+    def _validate_image(self, img_data: bytes, min_size: int = 500) -> bool:
+        """Validate that the downloaded data is a valid image above a minimum size.
         
         Args:
             img_data: Raw image data
+            min_size: Minimum byte size to filter out tiny placeholders
             
         Returns:
             bool: True if valid image, False otherwise
         """
+        if len(img_data) < min_size:
+            return False
         try:
             Image.open(BytesIO(img_data))
             return True
         except Exception:
             return False
 
+    @staticmethod
+    def _decode_data_uri(data_uri: str) -> Optional[bytes]:
+        """Decode a base64 data URI into raw bytes."""
+        match = re.match(r'data:image/[^;]+;base64,(.+)', data_uri)
+        if not match:
+            return None
+        try:
+            return base64.b64decode(match.group(1))
+        except Exception:
+            return None
+
+    def _save_image(self, img_data: bytes, destination_path: str) -> str:
+        os.makedirs(os.path.dirname(destination_path), exist_ok=True)
+        with open(destination_path, 'wb') as f:
+            f.write(img_data)
+        logger.info(f"Successfully saved image to {destination_path}")
+        return destination_path
+
     def fetch_links_by_search(self, search_query: str, destination_path: str) -> Optional[str]:
         """Search for and download the first valid image result.
+        
+        Handles both direct image URLs and base64-encoded data URIs that
+        modern Google Image Search returns.
         
         Args:
             search_query: The search term to look for
@@ -79,7 +108,13 @@ class GoogleImageSearch:
                         continue
 
                     img_url = img_tag.get("src")
-                    if not img_url or img_url.startswith('data:image'):
+                    if not img_url:
+                        continue
+
+                    if img_url.startswith('data:image'):
+                        img_data = self._decode_data_uri(img_url)
+                        if img_data and self._validate_image(img_data):
+                            return self._save_image(img_data, destination_path)
                         continue
 
                     if img_url.startswith('/'):
@@ -96,12 +131,7 @@ class GoogleImageSearch:
                             logger.warning(f"Invalid image data from {img_url}")
                             continue
                             
-                        os.makedirs(os.path.dirname(destination_path), exist_ok=True)
-                        with open(destination_path, 'wb') as f:
-                            f.write(img_data)
-                            
-                        logger.info(f"Successfully saved image to {destination_path}")
-                        return destination_path
+                        return self._save_image(img_data, destination_path)
                         
                     except requests.RequestException as e:
                         logger.warning(f"Failed to download image from {img_url}: {e}")
@@ -150,8 +180,55 @@ def download_from_google_search(
         return None
 
 
+def _download_pokemon_from_pokeapi(pokemon_name: str, destination_path: str) -> Optional[str]:
+    """Download a Pokemon image from PokeAPI official artwork.
+
+    Args:
+        pokemon_name: Name of the Pokemon (lowercase)
+        destination_path: Where to save the downloaded image
+
+    Returns:
+        Optional[str]: Path to saved image if successful, None otherwise
+    """
+    api_url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name.lower()}"
+    try:
+        resp = requests.get(api_url, timeout=10)
+        resp.raise_for_status()
+        data = resp.json()
+
+        artwork_url = (
+            data.get("sprites", {})
+            .get("other", {})
+            .get("official-artwork", {})
+            .get("front_default")
+        )
+        if not artwork_url:
+            logger.warning(f"No official artwork URL in PokeAPI response for {pokemon_name}")
+            return None
+
+        img_resp = requests.get(artwork_url, timeout=15)
+        img_resp.raise_for_status()
+
+        try:
+            Image.open(BytesIO(img_resp.content))
+        except Exception:
+            logger.warning(f"Invalid image data from PokeAPI for {pokemon_name}")
+            return None
+
+        os.makedirs(os.path.dirname(destination_path), exist_ok=True)
+        with open(destination_path, 'wb') as f:
+            f.write(img_resp.content)
+
+        logger.info(f"Successfully saved PokeAPI image to {destination_path}")
+        return destination_path
+
+    except requests.RequestException as e:
+        logger.warning(f"PokeAPI download failed for {pokemon_name}: {e}")
+        return None
+
+
 def download_pokemon_from_google_search(pokemon_name: str, resources_path: str) -> Optional[str]:
-    """Download a Pokemon image.
+    """Download a Pokemon image, trying PokeAPI first and Google as fallback.
     
     Args:
         pokemon_name: Name of the Pokemon
@@ -160,12 +237,25 @@ def download_pokemon_from_google_search(pokemon_name: str, resources_path: str) 
     Returns:
         Optional[str]: Path to saved image if successful, None otherwise
     """
-    search = f"pokemondb {pokemon_name}"
     logger.info(f"Downloading Pokemon: {pokemon_name}")
+    local_dir = "pokemons"
+    output_filename = f"{pokemon_name}.{DEFAULT_IMG_TYPE}"
+    destination_path = os.path.join(resources_path, local_dir, output_filename)
+
+    if os.path.exists(destination_path):
+        logger.info(f"Image {output_filename} already exists in {local_dir}")
+        return destination_path
+
+    result = _download_pokemon_from_pokeapi(pokemon_name, destination_path)
+    if result:
+        return result
+
+    logger.info(f"PokeAPI failed for {pokemon_name}, falling back to Google search")
+    search = f"pokemondb {pokemon_name}"
     return download_from_google_search(
         search=search,
-        local_dir="pokemons",
-        output_filename=f"{pokemon_name}.{DEFAULT_IMG_TYPE}",
+        local_dir=local_dir,
+        output_filename=output_filename,
         resources_path=resources_path,
     )
 

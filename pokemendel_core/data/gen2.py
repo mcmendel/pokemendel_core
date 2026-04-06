@@ -82,10 +82,10 @@ _GEN1_STATS = {
             special_defence=55,
     ),
     PokemonGen2.BUTTERFREE: Stats(
-            attack=80,
-            defence=55,
-            special_attack=65,
-            special_defence=75,
+            attack=45,
+            defence=50,
+            special_attack=90,
+            special_defence=85,
     ),
     PokemonGen2.WEEDLE: Stats(
             attack=75,

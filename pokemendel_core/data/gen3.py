@@ -2820,7 +2820,7 @@ _GEN3_POKEMONS = {
         supported_abilities=[
             Abilities.FORECAST,
         ],
-        form="Snowy"
+        form="Snowy",
         base_name=PokemonGen3.CASTFORM,
     ),
     PokemonGen3.KECLEON: Pokemon(

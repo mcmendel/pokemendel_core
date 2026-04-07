@@ -180,17 +180,21 @@ def download_from_google_search(
         return None
 
 
-def _download_pokemon_from_pokeapi(pokemon_name: str, destination_path: str) -> Optional[str]:
+def _download_pokemon_from_pokeapi(
+    pokemon_name: str, destination_path: str, form: Optional[str] = None
+) -> Optional[str]:
     """Download a Pokemon image from PokeAPI official artwork.
 
     Args:
-        pokemon_name: Name of the Pokemon (lowercase)
+        pokemon_name: Base name of the Pokemon
         destination_path: Where to save the downloaded image
+        form: Optional form name (e.g. "Attack", "Sandy")
 
     Returns:
         Optional[str]: Path to saved image if successful, None otherwise
     """
-    api_url = f"https://pokeapi.co/api/v2/pokemon/{pokemon_name.lower()}"
+    api_slug = f"{pokemon_name}-{form}".lower() if form else pokemon_name.lower()
+    api_url = f"https://pokeapi.co/api/v2/pokemon/{api_slug}"
     try:
         resp = requests.get(api_url, timeout=10)
         resp.raise_for_status()
@@ -227,31 +231,35 @@ def _download_pokemon_from_pokeapi(pokemon_name: str, destination_path: str) -> 
         return None
 
 
-def download_pokemon_from_google_search(pokemon_name: str, resources_path: str) -> Optional[str]:
+def download_pokemon_from_google_search(
+    pokemon_name: str, resources_path: str, form: Optional[str] = None
+) -> Optional[str]:
     """Download a Pokemon image, trying PokeAPI first and Google as fallback.
     
     Args:
-        pokemon_name: Name of the Pokemon
+        pokemon_name: Base name of the Pokemon
         resources_path: Base path for resources
+        form: Optional form name (e.g. "Attack", "Sandy")
         
     Returns:
         Optional[str]: Path to saved image if successful, None otherwise
     """
-    logger.info(f"Downloading Pokemon: {pokemon_name}")
+    display = f"{pokemon_name} ({form})" if form else pokemon_name
+    logger.info(f"Downloading Pokemon: {display}")
     local_dir = "pokemons"
-    output_filename = f"{pokemon_name}.{DEFAULT_IMG_TYPE}"
+    output_filename = f"{pokemon_name}-{form}.{DEFAULT_IMG_TYPE}" if form else f"{pokemon_name}.{DEFAULT_IMG_TYPE}"
     destination_path = os.path.join(resources_path, local_dir, output_filename)
 
     if os.path.exists(destination_path):
         logger.info(f"Image {output_filename} already exists in {local_dir}")
         return destination_path
 
-    result = _download_pokemon_from_pokeapi(pokemon_name, destination_path)
+    result = _download_pokemon_from_pokeapi(pokemon_name, destination_path, form=form)
     if result:
         return result
 
-    logger.info(f"PokeAPI failed for {pokemon_name}, falling back to Google search")
-    search = f"pokemondb {pokemon_name}"
+    logger.info(f"PokeAPI failed for {display}, falling back to Google search")
+    search = f"pokemondb {pokemon_name} {form} form" if form else f"pokemondb {pokemon_name}"
     return download_from_google_search(
         search=search,
         local_dir=local_dir,
@@ -312,6 +320,7 @@ def main():
     """Main entry point for command line usage."""
     parser = argparse.ArgumentParser(description='Pokemon Image Downloader')
     parser.add_argument('--pokemon-name', type=str, help='Pokemon to download')
+    parser.add_argument('--pokemon-form', type=str, help='Pokemon form (e.g. Attack, Sandy)')
     parser.add_argument('--gym-output-name', type=str, help='Output name for gym image')
     parser.add_argument('--pokemon-type', type=str, help='Pokemon type to download')
     parser.add_argument('--gym-badge', type=str, help='Badge name')
@@ -321,7 +330,7 @@ def main():
     args = parser.parse_args()
     
     if args.pokemon_name:
-        download_pokemon_from_google_search(args.pokemon_name, args.resources_path)
+        download_pokemon_from_google_search(args.pokemon_name, args.resources_path, form=args.pokemon_form)
 
     if args.gym_output_name and args.gym_badge and args.gym_location:
         download_gym_from_google_search(

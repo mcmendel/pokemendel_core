@@ -727,6 +727,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.ANTICIPATION],
+        form="Sandy",
+        base_name="Wormadam",
     ),
     PokemonGen4.WORMADAM_TRASH: Pokemon(
         name=PokemonGen4.WORMADAM_TRASH,
@@ -746,6 +748,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.ANTICIPATION],
+        form="Trash",
+        base_name="Wormadam",
     ),
     PokemonGen4.WORMADAM_PLANT: Pokemon(
         name=PokemonGen4.WORMADAM_PLANT,
@@ -765,6 +769,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.ANTICIPATION],
+        form="Plant",
+        base_name="Wormadam",
     ),
     PokemonGen4.MOTHIM: Pokemon(
         name=PokemonGen4.MOTHIM,
@@ -1289,7 +1295,7 @@ _GEN4_POKEMONS = {
         gen=4,
         types=[Types.NORMAL],
         evolves_to=[
-            Evolution(name=PokemonGen4.CHANSEY, evolution_type=EvolutionType.STONE, item=Item.OVAL_STONE, should_hold=True)
+            Evolution(level=12, name=PokemonGen4.CHANSEY, evolution_type=EvolutionType.STONE, item=Item.OVAL_STONE, should_hold=True)
         ],
         colors=[Colors.PINK, Colors.WHITE],
         supported_genders=[Genders.FEMALE],
@@ -2087,6 +2093,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.LEVITATE],
+        form="Heat",
+        base_name=PokemonGen4.ROTOM,
     ),
     PokemonGen4.WASH_ROTOM: Pokemon(
         name=PokemonGen4.WASH_ROTOM,
@@ -2106,6 +2114,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.LEVITATE],
+        form="Wash",
+        base_name=PokemonGen4.ROTOM,
     ),
     PokemonGen4.FROST_ROTOM: Pokemon(
         name=PokemonGen4.FROST_ROTOM,
@@ -2125,6 +2135,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.LEVITATE],
+        form="Frost",
+        base_name=PokemonGen4.ROTOM,
     ),
     PokemonGen4.FAN_ROTOM: Pokemon(
         name=PokemonGen4.FAN_ROTOM,
@@ -2144,6 +2156,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.LEVITATE],
+        form="Fan",
+        base_name=PokemonGen4.ROTOM,
     ),
     PokemonGen4.MOW_ROTOM: Pokemon(
         name=PokemonGen4.MOW_ROTOM,
@@ -2163,6 +2177,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.LEVITATE],
+        form="Mow",
+        base_name=PokemonGen4.ROTOM,
     ),
     PokemonGen4.UXIE: Pokemon(
         name=PokemonGen4.UXIE,
@@ -2334,6 +2350,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=0,
         supported_abilities=[Abilities.LEVITATE],
+        form="Origin",
+        base_name=PokemonGen4.GIRATINA,
     ),
     PokemonGen4.CRESSELIA: Pokemon(
         name=PokemonGen4.CRESSELIA,
@@ -2429,6 +2447,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=4,
         supported_abilities=[Abilities.NATURAL_CURE],
+        form="Land",
+        base_name="Shaymin",
     ),
     PokemonGen4.SHAYMIN_SKY: Pokemon(
         name=PokemonGen4.SHAYMIN_SKY,
@@ -2448,6 +2468,8 @@ _GEN4_POKEMONS = {
         ],
         num_legs=4,
         supported_abilities=[Abilities.SERENE_GRACE],
+        form="Sky",
+        base_name="Shaymin",
     ),
     PokemonGen4.ARCEUS: Pokemon(
         name=PokemonGen4.ARCEUS,

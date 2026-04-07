@@ -39,6 +39,8 @@ class Pokemon:
     num_legs: int = -1
     nature: Optional[Natures] = None
     supported_abilities: List[Abilities] = field(default_factory=list)
+    form: Optional[str] = None
+    base_name: Optional[str] = None
 
     def evolve_pokemon(self, evolution_pokemon: 'Pokemon') -> None:
         """Evolve this Pokemon into another Pokemon."""
@@ -60,3 +62,5 @@ class Pokemon:
             if evolution_pokemon.supported_abilities
             else self.supported_abilities
         )
+        self.form = self.form
+        self.base_name = self.base_name

@@ -2751,6 +2751,78 @@ _GEN3_POKEMONS = {
             Abilities.FORECAST,
         ],
     ),
+    PokemonGen3.CASTFORM_SUNNY: Pokemon(
+        name=PokemonGen3.CASTFORM_SUNNY,
+        gen=3,
+        types=[Types.FIRE],
+        evolves_to=[],
+        colors=[Colors.RED, Colors.ORANGE],
+        supported_genders=[Genders.MALE, Genders.FEMALE],
+        stats=Stats(
+            attack=70,
+            defence=70,
+            special_attack=70,
+            special_defence=70,
+        ),
+        categories=[
+            Categories.ITEM,
+            Categories.FANTASY,
+        ],
+        num_legs=0,
+        supported_abilities=[
+            Abilities.FORECAST,
+        ],
+        form="Sunny",
+        base_name=PokemonGen3.CASTFORM,
+    ),
+    PokemonGen3.CASTFORM_RAINY: Pokemon(
+        name=PokemonGen3.CASTFORM_RAINY,
+        gen=3,
+        types=[Types.WATER],
+        evolves_to=[],
+        colors=[Colors.BLUE],
+        supported_genders=[Genders.MALE, Genders.FEMALE],
+        stats=Stats(
+            attack=70,
+            defence=70,
+            special_attack=70,
+            special_defence=70,
+        ),
+        categories=[
+            Categories.ITEM,
+            Categories.FANTASY,
+        ],
+        num_legs=0,
+        supported_abilities=[
+            Abilities.FORECAST,
+        ],
+        form="Rainy",
+        base_name=PokemonGen3.CASTFORM,
+    ),
+    PokemonGen3.CASTFORM_SNOWY: Pokemon(
+        name=PokemonGen3.CASTFORM_SNOWY,
+        gen=3,
+        types=[Types.ICE],
+        evolves_to=[],
+        colors=[Colors.GRAY, Colors.PURPLE],
+        supported_genders=[Genders.MALE, Genders.FEMALE],
+        stats=Stats(
+            attack=70,
+            defence=70,
+            special_attack=70,
+            special_defence=70,
+        ),
+        categories=[
+            Categories.ITEM,
+            Categories.FANTASY,
+        ],
+        num_legs=0,
+        supported_abilities=[
+            Abilities.FORECAST,
+        ],
+        form="Snowy"
+        base_name=PokemonGen3.CASTFORM,
+    ),
     PokemonGen3.KECLEON: Pokemon(
         name=PokemonGen3.KECLEON,
         gen=3,
@@ -3560,6 +3632,78 @@ _GEN3_POKEMONS = {
         supported_abilities=[
             Abilities.PRESSURE,
         ],
+    ),
+    PokemonGen3.DEOXYS_ATTACK: Pokemon(
+        name=PokemonGen3.DEOXYS_ATTACK,
+        gen=3,
+        types=[Types.PSYCHIC],
+        evolves_to=[],
+        colors=[Colors.RED, Colors.BLUE],
+        supported_genders=[Genders.GENDERLESS],
+        stats=Stats(
+            attack=150,
+             defence=50,
+            special_attack=150,
+            special_defence=50,
+        ),
+        categories=[
+            Categories.ITEM,
+            Categories.FANTASY,
+        ],
+        num_legs=2,
+        supported_abilities=[
+            Abilities.PRESSURE,
+        ],
+        form="Attack",
+        base_name=PokemonGen3.DEOXYS,
+    ),
+    PokemonGen3.DEOXYS_DEFENSE: Pokemon(
+        name=PokemonGen3.DEOXYS_DEFENSE,
+        gen=3,
+        types=[Types.PSYCHIC],
+        evolves_to=[],
+        colors=[Colors.RED, Colors.BLUE],
+        supported_genders=[Genders.GENDERLESS],
+        stats=Stats(
+            attack=150,
+             defence=50,
+            special_attack=150,
+            special_defence=50,
+        ),
+        categories=[
+            Categories.ITEM,
+            Categories.FANTASY,
+        ],
+        num_legs=2,
+        supported_abilities=[
+            Abilities.PRESSURE,
+        ],
+        form="Defense",
+        base_name=PokemonGen3.DEOXYS,
+    ),
+    PokemonGen3.DEOXYS_SPEED: Pokemon(
+        name=PokemonGen3.DEOXYS_SPEED,
+        gen=3,
+        types=[Types.PSYCHIC],
+        evolves_to=[],
+        colors=[Colors.RED, Colors.BLUE],
+        supported_genders=[Genders.GENDERLESS],
+        stats=Stats(
+            attack=150,
+             defence=50,
+            special_attack=150,
+            special_defence=50,
+        ),
+        categories=[
+            Categories.ITEM,
+            Categories.FANTASY,
+        ],
+        num_legs=2,
+        supported_abilities=[
+            Abilities.PRESSURE,
+        ],
+        form="Speed",
+        base_name=PokemonGen3.DEOXYS,
     ),
 }
 

@@ -364,6 +364,9 @@ class PokemonNames:
     FEEBAS = "Feebas"
     MILOTIC = "Milotic"
     CASTFORM = "Castform"
+    CASTFORM_SUNNY = "Castform-Sunny"
+    CASTFORM_RAINY = "Castform-Rainy"
+    CASTFORM_SNOWY = "Castform-Snowy"
     KECLEON = "Kecleon"
     SHUPPET = "Shuppet"
     BANETTE = "Banette"
@@ -399,6 +402,9 @@ class PokemonNames:
     RAYQUAZA = "Rayquaza"
     JIRACHI = "Jirachi"
     DEOXYS = "Deoxys"
+    DEOXYS_ATTACK = "Deoxys-Attack"
+    DEOXYS_DEFENSE = "Deoxys-Defense"
+    DEOXYS_SPEED = "Deoxys-Speed"
 
     # Gen 4
     TURTWIG = "Turtwig"

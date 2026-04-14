@@ -151,7 +151,8 @@ def download_from_google_search(
     search: str,
     local_dir: str,
     resources_path: str,
-    output_filename: Optional[str] = None
+    output_filename: Optional[str] = None,
+    force: bool = False,
 ) -> Optional[str]:
     """Download an image from Google Search results.
     
@@ -160,6 +161,7 @@ def download_from_google_search(
         local_dir: Subdirectory to save in
         resources_path: Base path for resources
         output_filename: Optional custom filename
+        force: Re-download even if the image already exists
         
     Returns:
         Optional[str]: Path to saved image if successful, None otherwise
@@ -168,7 +170,7 @@ def download_from_google_search(
         output_filename = output_filename or search
         local_path = os.path.join(resources_path, local_dir, output_filename)
         
-        if os.path.exists(local_path):
+        if not force and os.path.exists(local_path):
             logger.info(f"Image {output_filename} already exists in {local_dir}")
             return local_path
 
@@ -232,7 +234,7 @@ def _download_pokemon_from_pokeapi(
 
 
 def download_pokemon_from_google_search(
-    pokemon_name: str, resources_path: str, form: Optional[str] = None
+    pokemon_name: str, resources_path: str, form: Optional[str] = None, force: bool = False,
 ) -> Optional[str]:
     """Download a Pokemon image, trying PokeAPI first and Google as fallback.
     
@@ -240,6 +242,7 @@ def download_pokemon_from_google_search(
         pokemon_name: Base name of the Pokemon
         resources_path: Base path for resources
         form: Optional form name (e.g. "Attack", "Sandy")
+        force: Re-download even if the image already exists
         
     Returns:
         Optional[str]: Path to saved image if successful, None otherwise
@@ -250,7 +253,7 @@ def download_pokemon_from_google_search(
     output_filename = f"{pokemon_name}-{form}.{DEFAULT_IMG_TYPE}" if form else f"{pokemon_name}.{DEFAULT_IMG_TYPE}"
     destination_path = os.path.join(resources_path, local_dir, output_filename)
 
-    if os.path.exists(destination_path):
+    if not force and os.path.exists(destination_path):
         logger.info(f"Image {output_filename} already exists in {local_dir}")
         return destination_path
 
@@ -265,6 +268,7 @@ def download_pokemon_from_google_search(
         local_dir=local_dir,
         output_filename=output_filename,
         resources_path=resources_path,
+        force=force,
     )
 
 
@@ -321,6 +325,7 @@ def main():
     parser = argparse.ArgumentParser(description='Pokemon Image Downloader')
     parser.add_argument('--pokemon-name', type=str, help='Pokemon to download')
     parser.add_argument('--pokemon-form', type=str, help='Pokemon form (e.g. Attack, Sandy)')
+    parser.add_argument('--force', action='store_true', help='Re-download even if the image already exists')
     parser.add_argument('--gym-output-name', type=str, help='Output name for gym image')
     parser.add_argument('--pokemon-type', type=str, help='Pokemon type to download')
     parser.add_argument('--gym-badge', type=str, help='Badge name')
@@ -330,7 +335,7 @@ def main():
     args = parser.parse_args()
     
     if args.pokemon_name:
-        download_pokemon_from_google_search(args.pokemon_name, args.resources_path, form=args.pokemon_form)
+        download_pokemon_from_google_search(args.pokemon_name, args.resources_path, form=args.pokemon_form, force=args.force)
 
     if args.gym_output_name and args.gym_badge and args.gym_location:
         download_gym_from_google_search(

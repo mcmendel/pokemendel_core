@@ -276,7 +276,8 @@ def download_gym_from_google_search(
     gym_name: str,
     badge_name: str,
     location: str,
-    resources_path: str
+    resources_path: str,
+    force: bool = False,
 ) -> Optional[str]:
     """Download a gym badge image.
     
@@ -285,6 +286,7 @@ def download_gym_from_google_search(
         badge_name: Name of the badge
         location: Location of the gym
         resources_path: Base path for resources
+        force: Re-download even if the image already exists
         
     Returns:
         Optional[str]: Path to saved image if successful, None otherwise
@@ -297,15 +299,19 @@ def download_gym_from_google_search(
         local_dir="gyms",
         output_filename=f"{gym_name}.{DEFAULT_IMG_TYPE}",
         resources_path=resources_path,
+        force=force,
     )
 
 
-def download_pokemon_type_from_google_search(pokemon_type: str, resources_path: str) -> Optional[str]:
+def download_pokemon_type_from_google_search(
+    pokemon_type: str, resources_path: str, force: bool = False,
+) -> Optional[str]:
     """Download a Pokemon type symbol image.
     
     Args:
         pokemon_type: The type to download
         resources_path: Base path for resources
+        force: Re-download even if the image already exists
         
     Returns:
         Optional[str]: Path to saved image if successful, None otherwise
@@ -317,6 +323,7 @@ def download_pokemon_type_from_google_search(pokemon_type: str, resources_path: 
         local_dir="types",
         output_filename=f"{pokemon_type}.{DEFAULT_IMG_TYPE}",
         resources_path=resources_path,
+        force=force,
     )
 
 
@@ -342,11 +349,12 @@ def main():
             args.gym_output_name,
             args.gym_badge,
             args.gym_location,
-            args.resources_path
+            args.resources_path,
+            force=args.force,
         )
 
     if args.pokemon_type:
-        download_pokemon_type_from_google_search(args.pokemon_type, args.resources_path)
+        download_pokemon_type_from_google_search(args.pokemon_type, args.resources_path, force=args.force)
 
 
 if __name__ == "__main__":

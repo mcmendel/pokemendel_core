@@ -1034,7 +1034,7 @@ _GEN4_POKEMONS = {
         gen=4,
         types=[Types.NORMAL],
         evolves_to=[
-            Evolution(name=PokemonGen4.LOPUNNY)
+            Evolution(name=PokemonGen4.LOPUNNY, evolution_type=EvolutionType.FRIENDSHIP, level=13)
         ],
         colors=[Colors.BROWN, Colors.WHITE],
         supported_genders=[Genders.MALE, Genders.FEMALE],
